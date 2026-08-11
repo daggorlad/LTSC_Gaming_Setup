@@ -58,5 +58,8 @@ Chris Titus Tech – [WinUtil](https://github.com/ChrisTitusTech/winutil)
 
 ## Disclaimer
 
-Use at your own risk. The script creates a restore point, but system changes are made.
-This script is provided as-is. I am **not responsible** for any negative side effects, data loss, system instability, or other issues that may result from using this script. Use it at your own risk.
+This script is provided **as-is**, without any warranty of any kind.
+
+I am not responsible for any damage, data loss, system instability, security issues, or other negative consequences that may result from using this script or any third-party tools (including activation scripts).
+
+By using this script, you acknowledge that you do so entirely at your own risk.

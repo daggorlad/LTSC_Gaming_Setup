@@ -1,6 +1,3 @@
-Here’s the updated **minimal README** with the requested information:
-
-```markdown
 # Windows 11 LTSC Gaming Setup
 
 A PowerShell script for a clean, high-performance, and privacy-focused Windows 11 LTSC installation.
@@ -63,4 +60,3 @@ Chris Titus Tech – [WinUtil](https://github.com/ChrisTitusTech/winutil)
 
 Use at your own risk. The script creates a restore point, but system changes are made.
 This script is provided as-is. I am **not responsible** for any negative side effects, data loss, system instability, or other issues that may result from using this script. Use it at your own risk.
-```

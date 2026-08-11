@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  resources:
+    # --- SOFTWARE STACK ---
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Brave
+      directives:
+        description: Install Brave Browser
+        allowPrerelease: true
+      settings:
+        id: Brave.Brave
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Waterfox
+      directives:
+        description: Install Waterfox
+        allowPrerelease: true
+      settings:
+        id: Waterfox.Waterfox
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: EpicGames
+      directives:
+        description: Install Epic Games Launcher
+        allowPrerelease: true
+      settings:
+        id: EpicGames.EpicGamesLauncher
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Simplewall
+      directives:
+        description: Install Simplewall Default-Deny Firewall
+        allowPrerelease: true
+      settings:
+        id: Henry++.Simplewall
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: ShutUp10
+      directives:
+        description: Install O&O ShutUp10++
+        allowPrerelease: true
+      settings:
+        id: OOSoftware.ShutUp10
+        source: winget
+
+    # --- PERFORMANCE & GAMING REGISTRY TWEAKS ---
+    - resource: PSDscResources/Registry
+      id: EnableHAGS
+      directives:
+        description: Enable Hardware-Accelerated GPU Scheduling (HAGS)
+        allowPrerelease: true
+      settings:
+        Key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers
+        ValueName: HwSchMode
+        ValueData: '2'
+        ValueType: Dword
+        Ensure: Present
+    - resource: PSDscResources/Registry
+      id: DisableVBS
+      directives:
+        description: Disable Virtualization Based Security (VBS)
+        allowPrerelease: true
+      settings:
+        Key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard
+        ValueName: EnableVirtualizationBasedSecurity
+        ValueData: '0'
+        ValueType: Dword
+        Ensure: Present
+    - resource: PSDscResources/Registry
+      id: DisableAMDTelemetry
+      directives:
+        description: Hard-Disable AMD User Experience Program
+        allowPrerelease: true
+      settings:
+        Key: HKEY_LOCAL_MACHINE\SOFTWARE\AMD\WVR
+        ValueName: EnableTelemetry
+        ValueData: '0'
+        ValueType: Dword
+        Ensure: Present
